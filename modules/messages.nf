@@ -3,12 +3,10 @@ def helpMessage() {
         Usage:
         The typical command for running the pipeline is as follows:
         nextflow run main.nf --reads "PathToReadFile(s)" --output_dir "PathToOutputDir" --valid_mode "NameOfMode" 
-
         Mandatory arguments:
          --reads                        Query fastqz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
          --output_dir                   Output directory to place final combined kraken output (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
          --valid_mode	                This should be one of "--pacbio-raw", "--pacbio-corr", "--pacbio-hifi", "--nano-raw", "--nano-corr", or "--nano-hq". [Default: "--nano-raw"]
-
         Optional arguments:
          --help                         This usage statement.
          --version                      Version statement
@@ -40,5 +38,3 @@ if (params.version) {
     Version()
     exit 0
 }
-
-

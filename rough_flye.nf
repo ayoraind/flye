@@ -60,8 +60,9 @@ workflow {
          reads_ch = channel
                           .fromPath( params.reads, checkIfExists: true )
                           .map { file -> tuple(file.simpleName, file) }
+	// reads_ch.view()
 	 mode_ch = channel.of( params.valid_mode )
-
-    FLYE(reads_ch, params.valid_mode)
+	 
+         FLYE(reads_ch, params.valid_mode)
 
 }

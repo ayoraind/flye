@@ -4,8 +4,8 @@ process FLYE {
     
     errorStrategy 'ignore'
     
-    conda "../flye_env.yml"
-    
+    conda "/MIGE/01_DATA/07_TOOLS_AND_SOFTWARE/nextflow_pipelines/flye_assembly/flye_env.yml"
+    // outside of the TAPIR network, simply edit script and use conda '../flye_env.yml'
 
     input:
     tuple val(meta), path(reads)
@@ -38,10 +38,7 @@ process FLYE {
     mv assembly_graph.gv ${prefix}.assembly_graph.gv
     mv assembly_info.txt ${prefix}.assembly_info.txt
     mv params.json ${prefix}.params.json
-
-
     sed -i "s/^>/>${prefix}_/g" ${prefix}.fasta
-
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
