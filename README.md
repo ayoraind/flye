@@ -11,7 +11,7 @@
 
         Mandatory arguments:
          --reads                        Query fastqz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
-         --output_dir                   Output directory to place final combined kraken output (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
+         --output_dir                   Output directory to place assembly (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
          
         Optional arguments:
 	 --valid_mode                   This should be one of "--pacbio-raw", "--pacbio-corr", "--pacbio-hifi", "--nano-raw", "--nano-corr", or "--nano-hq". [Default: "--nano-raw"]
