@@ -10,7 +10,7 @@
         nextflow run main.nf --reads "PathToReadFile(s)" --output_dir "PathToOutputDir" --valid-mode "ModeName"
 
         Mandatory arguments:
-         --reads                        Query fastqz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
+         --reads                        Query fastq.gz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
          --output_dir                   Output directory to place assembly (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
          
         Optional arguments:
