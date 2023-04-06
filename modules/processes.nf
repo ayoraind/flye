@@ -1,6 +1,7 @@
 process FLYE {
     publishDir "${params.output_dir}/${meta}_FLYE", mode:'copy'
     tag "flye on $meta"
+    memory { 4.GB * task.attempt }
     
     errorStrategy { task.attempt <= 5 ? "retry" : "finish" }
     maxRetries 5
